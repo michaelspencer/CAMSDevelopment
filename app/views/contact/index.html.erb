@@ -1,0 +1,80 @@
+<div id="main">
+	<div id='sidebar'>
+	<div class="box box_small">
+		
+			<h3>Submenu</h3>
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="page.html">About</a></li>
+				<li><a href="page_fullwidth.html">Philosophy</a></li>
+				<li><a href="portfolio.html">Our Work</a></li>
+				<li><a href="page_fullwidth.html">The company</a>
+					<ul>
+					<li><a href="page.html">Team</a></li>
+					<li><a href="page_fullwidth.html">Jobs</a></li>
+					<li><a href="contact.php">Contact</a></li>
+					</ul>
+				</li>
+			</ul>
+		
+			
+		</div><!--end box-->
+		<div class="box box_small">
+		<h3>Latest News</h3>
+		<ul>
+			<li><a href="single.html">Our New Page is online</a></li>
+			<li><a href="single.html">Flash Slider Released</a></li>
+			<li><a href="single.html">Apple buys Microsoft</a></li>
+			<li><a href="single.html">Adobe buys Macromedia</a></li>
+		</ul>
+		</div>
+		
+	</div><!-- end #sidebar -->
+	
+	<div id="content">
+	
+		<div class='entry'>
+			<h2><a href='single.html'>Contact</a></h2>
+				<p>
+Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in  anim id est laborum.
+				<br/>
+				Allamco laboris nisi ut aliquip ex ea commodo consequat.
+Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in  anim id est laborum.
+				</p>
+				
+
+
+<% form_tag({:action => "send_mail"} , {:class => "ajax_form"}) do %>
+  <p>
+    <%= label :email, :name, "Name" %><br />
+    <%= text_field :email, :name %>
+  </p>
+
+  <p>
+    <%= label :email, :address, "Your Email Address" %><br />
+    <%= text_field :email, :address %>
+  </p>
+
+  <p>
+    <%= label :email, :subject, "Subject" %><br />
+    <%= text_field :email, :subject %>
+  </p>
+
+  <p>
+    <%= label :email, :body, "Your Message" %><br />
+    <%= text_area :email, :body, :rows => 8, :cols => 50 %>
+  </p>
+
+  <p>
+    <%= submit_tag "Send", :class => "button", :id => "send", :size => "16" %>
+  </p>
+<% end %>
+
+			</div><!--end entry-->
+		
+		</div><!-- end content -->
+		<!--[if IE 6]><div style="clear: both"></div><![endif]-->
+		
+	</div><!--end main-->
+	
+</div><!-- end #top -->
