@@ -18,7 +18,7 @@ jQuery(window).load(function(){
 	{	
 		jQuery('#featured_image img').not('.current_img').css({display:"none"});
 		// set the automatic image rotation, number is time between transitions in miliseconds
-		interval = setInterval(function() { k_fader("#featured_image img",'1'); }, 4000); 	
+		interval = setInterval(function() { k_fader("#featured_image img",'1'); }, 5200); 	
 	}
 });
 
