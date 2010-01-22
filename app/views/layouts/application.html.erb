@@ -3,7 +3,7 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     	<title><%= h(yield(:title) || "CAMSDevelopment") %></title>
-		<%= stylesheet_link_tag "style", "style2", "/javascripts/prettyPhoto/css/prettyPhoto" %> 
+		<%= stylesheet_link_tag "application", "style", "style2", "/javascripts/prettyPhoto/css/prettyPhoto" %> 
 
 		<%= javascript_include_tag "jquery" %>
 		<%= javascript_include_tag "/prettyPhoto/js/jquery.prettyPhoto", :charset => "utf-8" %>
@@ -21,6 +21,8 @@
 
 
 		<%= javascript_include_tag "custom" %>
+		<%= javascript_include_tag "application" %>
+
 
 		<!--[if IE 6]>
 			<%= javascript_include_tag "dd_belated_png" %>
@@ -44,7 +46,6 @@
 					<%= semantic_menu do |root|
 					  	root.add "<strong>Home</strong><span>introduction</span>", root_path
 						root.add "<strong>About</strong><span>who we are</span>", page_path('about'), :class => 'xyz' do |about|
-				    		about.add "At a Glance", 	page_path('ataglance')
 					    	about.add "History",     	page_path('history')
 					    	about.add "Leadership",  	page_path('leadership')
 					    	about.add "Partners",  		page_path('partners')					  	
@@ -57,13 +58,10 @@
 					    	portfolio.add "Residential",  	page_path('residential')
 					    	portfolio.add "Hotel/Resort",  	page_path('hotelresort')
 					    	portfolio.add "Urban Renewal",  page_path('urbanrenewal')
-					    	portfolio.add "Models", 		page_path('models'), :class => 'models' do |mod|
-								mod.add "Low Cost",  		page_path('lowcost')
-								mod.add "Civil Servant",  	page_path('civilservant')
-							end
-							root.add "<strong>Financing</strong><span>how we pay for it</span>", page_path('financing')		
-							root.add "<strong>Contact</strong><span>get in touch</span>", contact_path
+					    	portfolio.add "Civil", 			page_path('civil')
 						end
+						root.add "<strong>Financing</strong><span>how we pay for it</span>", page_path('financing')		
+						root.add "<strong>Contact</strong><span>get in touch</span>", contact_path
 					end %>
 
 <!--					
@@ -146,58 +144,9 @@
 
 	<div id='footer'>
 	
-		<div class="box box_mini">
-			<h4>Latest News</h4>
-			<ul>
-				<li><a href="single.html">Our New Page is online</a></li>
-				<li><a href="single.html">Flash Slider Released</a></li>
-				<li><a href="single.html">Apple buys Microsoft</a></li>
-				<li><a href="single.html">Adobe buys Macromedia</a></li>
-			</ul>
-		</div>
-		<div class="box box_mini">
-			<h4>Pages</h4>
-			<ul>
-				<li><a href="index.html">Home</a></li>
-				<li><a href="portfolio.html">Portfolio</a></li>
-				<li><a href="contact.php">Contact</a></li>
-				<li><a href="page.html">About Us</a></li>
-				<li><a href="page_fullwidth.html">Jobs</a></li>
-				<li><a href="page.html">Philosophy</a></li>
-			</ul>
-		</div>
-		<div class="box box_mini">
-			<h4>Template Files</h4>
-			<ul>
-				<li><a href="index.html">Index</a></li>
-				<li><a href="index_no3d.html">Index - Fading Slider</a></li>
-				<li><a href="blog.html">Blog</a></li>
-				<li><a href="single.html">Single Blog Page</a></li>
-				<li><a href="portfolio.html">Portfolio</a></li>
-				<li><a href="portfolio_single.html">Single Portfolio Page</a></li>
-				<li><a href="page.html">Page</a></li>
-				<li><a href="page_fullwidth.html">Page Fullwidth</a></li>
-				<li><a href="contact.php">Contact</a></li>
-				<li><a href="archive.html">Archive</a></li>
-			</ul>
-		</div>
-		<div class="box box_mini">
-			<h4>Miscellaneous</h4>
-			<ul>
-				<li><a href="page.html">Register</a></li>
-				<li><a href="page.html">Log in</a></li>
-				<li><a href="page.html">Terms of Service</a></li>
-				<li><a href="contact.php">Contact</a></li>
-				<li><a href="page.html">Site Map</a></li>
-			</ul>
-		</div>
-		
-		<div class="box box_custom_footer">
-			<a href='contact.php' class='custom_button ie6fix rounded'><strong>Contact Form</strong><span>get in touch with us</span></a>
-			
 			<p>All content Copyright &copy; 2010 CAMSDevelopment, Inc</p>
 			
-		</div>
+	</div>
 	
 	
 	</div><!--end footer-->
