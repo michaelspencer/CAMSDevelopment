@@ -1,0 +1,49 @@
+<div id='admin'>
+
+	<%= render :partial => "admin/sidebar" %>
+
+	<div id='admin-content'>
+
+		<h1>Edit Post</h1>
+
+		<div class='box'>
+
+			<%= render :partial => 'form' %>
+
+			<p>
+			<%= link_to "Back to Posts", posts_path %> |
+			<%= link_to "Delete Post", @post, :confirm => 'Are you sure you want to delete this Post?', :method => :delete %>
+			</p>
+
+		</div><!-- end admin-box -->
+
+		<h3>Comments</h3> 
+
+		<table summary="Comments">
+    		<thead>
+    			<tr>
+            		<th scope="col" width="30%" class="corner-top-left">	Author</th>
+            		<th scope="col" width="50%" >							Comment</th>
+            		<th scope="col" width="20%" class="corner-top-right">	Actions</th>
+        		</tr>
+    		</thead>
+        	<tfoot>
+    			<tr>
+        			<td colspan="2" class="corner-bottom-left"><p>	<%= link_to 'Add a Comment', new_post_comment_path(@post) %></td>
+        			<td class="corner-bottom-right">&nbsp;</td>
+        		</tr>
+    		</tfoot>
+    		<tbody>
+				<% @post.comments.each do |comment| %> 
+					<tr class="<%= cycle('row-odd', 'row-even') %>">  
+						<td><%=h comment.commenter %></td>  
+						<td><%=h comment.body %></td>  
+						<td><%= link_to 'Edit', edit_post_comment_path(@post, comment) %> |  
+						<%= link_to 'Delete', post_comment_path(@post, comment), :confirm => 'Are you sure you want to delete this Comment?', :method => :delete %></td>  
+					</tr> 
+				<% end %>
+    		</tbody>
+		</table>
+
+	</div><!-- end #admin-content -->
+</div><!-- end #admin -->

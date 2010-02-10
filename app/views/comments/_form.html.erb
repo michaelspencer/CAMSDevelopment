@@ -1,0 +1,6 @@
+<% form_for([@post, @comment]) do |f| %> 
+	<%= f.error_messages %> 
+	<p> <%= f.label :commenter, "Author" %><br /> <%= f.text_field :commenter %> </p> 
+	<p> <%= f.label :body, "Comment" %><br /> <%= f.text_area :body %> </p> 
+	<p> <%= f.submit "Save", :class => "button" %>   <%= link_to "Cancel", edit_post_url(@post), :class => "button" %></p> 
+<% end %> 

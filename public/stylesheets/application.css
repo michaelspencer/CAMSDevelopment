@@ -1,3 +1,34 @@
+#nav2 {
+	font-size: 12px;
+}
+
+#nav2 ul {
+	float: right;
+	list-style-type: none;
+}
+
+#nav2 ul li {
+	float: left;
+	margin: 12px 0px 0px 12px;
+	padding: 0px 0px 0px 12px;
+	background: url(../images/header_navi_bg.gif) left center no-repeat;
+}
+
+#nav2 ul li.no_bg {
+	background: none;
+	border: none;
+}
+
+#nav2 ul li a {
+	text-decoration: none;
+	border-bottom: none;
+}
+
+#nav2 ul li a:hover {
+	color:#222;
+	text-decoration: none;
+}
+
 #sidebar_image{
 width:280px;
 height:420px;

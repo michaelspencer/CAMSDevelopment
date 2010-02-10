@@ -3,12 +3,14 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     	<title><%= h(yield(:title) || "CAMSDevelopment") %></title>
-		<%= stylesheet_link_tag "application", "style", "style2", "/javascripts/prettyPhoto/css/prettyPhoto" %> 
+		<%= stylesheet_link_tag "application", "admin", "style", "style2", "/javascripts/prettyPhoto/css/prettyPhoto" %> 
 
 		<%= javascript_include_tag "jquery" %>
 		<%= javascript_include_tag "/prettyPhoto/js/jquery.prettyPhoto", :charset => "utf-8" %>
 		<%= javascript_include_tag "/slideshow/js/swfobject/swfobject" %>
-
+		<%= javascript_include_tag "custom" %>
+		<%= javascript_include_tag "application" %>
+		
 		<script type="text/javascript">
 				var flashvars = {};
 				flashvars.xml = "slideshow/config.xml";
@@ -18,11 +20,6 @@
 				attributes.id = "slider";
 <!-- 			swfobject.embedSWF("slideshow/cu3er.swf", "featured_image", "940", "420", "9", "expressInstall.swf", flashvars, attributes); --> 
 		</script>
-
-
-		<%= javascript_include_tag "custom" %>
-		<%= javascript_include_tag "application" %>
-
 
 		<!--[if IE 6]>
 			<%= javascript_include_tag "dd_belated_png" %>
@@ -41,8 +38,19 @@
 
 				<div id="head">
 
-					<h1 class="logo ie6fix"><a href="index.html" title="">CAMSDevelopment</a></h1>
+					<h1 class="logo ie6fix"><%= link_to "home", root_path, :title => "" %></h1>
 
+					<div id="nav2">
+						<ul>
+							<li class="no_bg"><%= link_to "Home", root_path %></li>
+							<li><a href="/faq">FAQ</a></li>
+							<li><a href="/contact">Contact</a></li>
+							<li><%= link_to "Administration", posts_path %></li>
+						</ul>
+					</div> <!-- ends nav2 -->
+
+
+<!-- Primary Nav -->
 					<%= semantic_menu do |root|
 					  	root.add "<strong>Home</strong><span>introduction</span>", root_path
 						root.add "<strong>About</strong><span>who we are</span>", page_path('about'), :class => 'xyz' do |about|
@@ -63,65 +71,6 @@
 						root.add "<strong>Financing</strong><span>how we pay for it</span>", page_path('financing')		
 						root.add "<strong>Contact</strong><span>get in touch</span>", contact_path
 					end %>
-
-<!--					
-						root.add "<strong>About</strong><span>who we are</span>", page_path('about'), :class => 'about' do |about|
-				    		about.add "At a Glance", 	page_path('ataglance')
-				    		about.add "History",     	page_path('history')
-				    		about.add "Leadership",  	page_path('leadership')
-				    		about.add "Partners",  		page_path('partners')					  	
-				    		about.add "Media",  		page_path('media')
-				    		about.add "Citizenship",  	page_path('citizenship')					
-						end
-					  	root.add "<strong>Services</strong><span>what we do</span>", page_path('services')						
-						root.add "<strong>Portfolio</strong><span>what we did</span>", page_path('portfolio'), :class => 'portfolio' do |portfolio|
-					    	portfolio.add "Commercial", 	page_path('commercial')
-					    	portfolio.add "Institutional",	page_path('institutional')
-					    	portfolio.add "Residential",  	page_path('residential')
-					    	portfolio.add "Hotel/Resort",  	page_path('hotelresort')
-					    	portfolio.add "Urban Renewal",  page_path('urbanrenewal')
-					    	portfolio.add "Models", 		page_path('models'), :class => 'models' do |mod|
-								mod.add "Low Cost",  		page_path('lowcost')
-								mod.add "Civil Servant",  	page_path('civilservant')
-							end
-						end
-						root.add "<strong>Financing</strong><span>how we pay for it</span>", page_path('financing')		
-						root.add "<strong>Contact</strong><span>get in touch</span>", contact_path
-					end %>
-
--->
-
-<!--
-
-					<ul id="nav">
-						<li class='current'><a href="index.html"><strong>Home</strong><span>the starting page</span></a></li>
-						<li><a href="blog.html"><strong>Blog</strong><span>the latest gossip</span></a></li>
-						<li><a href="portfolio.html"><strong>Portfolio</strong><span>our best workpieces</span></a></li>
-						<li><a href="page.html"><strong>About</strong><span>this is our company</span></a>
-						<ul>
-							<li><a href="index.html">Index</a></li>
-							<li><a href="index_no3d.html">Index - Fading Slider</a></li>
-							<li><a href="blog.html">Blog</a></li>
-							<li><a href="single.html">Single Blog Page</a></li>
-							<li><a href="portfolio.html">Portfolio</a></li>
-							<li><a href="portfolio_single.html">Single Portfolio Page</a></li>
-							<li><a href="page.html">Page</a></li>
-							<li><a href="page_fullwidth.html">Page Fullwidth</a></li>
-							<li><a href="contact.php">Contact</a></li>
-							<li><a href="archive.html">Archive</a></li>
-							<li><a href='#'>Second Level &raquo;</a>
-								<ul>
-								<li><a href='#'>Just for</a></li>
-								<li><a href='#'>Demonstration</a></li>
-								<li><a href='#'>Purpose</a></li>
-								</ul>
-							</li>
-							</ul>
-						</li>
-						<li><a href="contact.php"><strong>Contact</strong><span>send us an E-mail</span></a></li>
-					</ul>
-
--->
 
 		</div>	<!-- end #head -->
 	

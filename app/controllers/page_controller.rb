@@ -1,7 +1,8 @@
 class PageController < ApplicationController
   
   def show
-    render :action => params[:page]
+    @post = Post.find(:first, :conditions => ["sitelocation = ?", "page:" + params[:page]], :limit => 1)
+#    render :action => params[:page]
   end
   
 end

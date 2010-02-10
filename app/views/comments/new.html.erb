@@ -1,0 +1,19 @@
+<div id='admin'>
+
+	<%= render :partial => "admin/sidebar" %>
+
+	<div id='admin-content'>
+
+		<h1>New Comment for <%=h @post.name -%></h1>
+
+		<div class="box">
+
+			<%= render :partial => 'form' %>
+
+			<p>
+			<%= link_to "Back to Post", edit_post_url(@post) %>
+			</p>
+
+		</div><!-- end .box -->
+	</div><!-- end #admin-content -->
+</div><!-- end #admin-->

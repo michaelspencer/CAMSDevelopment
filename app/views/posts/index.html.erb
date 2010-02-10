@@ -1,0 +1,38 @@
+<div id='admin'>
+
+	<%= render :partial => "admin/sidebar" %>
+
+	<div id='admin-content'>
+
+		<h1>Posts</h1>
+
+		<table summary="Posts">
+    		<thead>
+    			<tr>
+            		<th scope="col" width="20%" class="corner-top-left">	Location</th>
+        			<th scope="col" width="20%">							Name</th>
+            		<th scope="col" width="40%">							Title</th>
+            		<th scope="col" width="20%" class="corner-top-right">	Actions</th>
+        		</tr>
+    		</thead>
+        	<tfoot>
+    			<tr>
+        			<td colspan="3" class="corner-bottom-left"><p><%= link_to "Add a Post", new_post_path %></p></td>
+        			<td class="corner-bottom-right">&nbsp;</td>
+        		</tr>
+    		</tfoot>
+    		<tbody>
+	  			<% for post in @posts %>
+	    		<tr class="<%= cycle('row-odd', 'row-even') %>">
+	      			<td><%=h post.sitelocation %></td>
+	      			<td><%=h post.name %></td>
+	      			<td><%=h post.title %></td>
+	      			<td><%= link_to "Edit", edit_post_path(post) %> |
+	      	  			<%= link_to "Delete", post, :confirm => 'Are you sure you want to delete this Post?', :method => :delete %></td>
+	    			</tr>
+	  			<% end %>
+    		</tbody>
+		</table>
+
+	</div><!-- end #admin-content -->
+</div><!-- end #admin -->

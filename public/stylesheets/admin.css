@@ -1,0 +1,156 @@
+/*  ================================================================================
+
+	* Filename: admin.css
+
+	* Description: Styling for a standard Admin application
+
+	* Version: 1.0
+	
+	* Website: camsdevelopment.com
+	
+	* Author: M. Spencer
+
+	* Page width: not-specified
+	
+	* Columns: 1
+
+    ================================================================================ */
+
+
+
+/* -------------------------------------------------------------------------------- 
+	General properties                                                 
+   -------------------------------------------------------------------------------- */
+
+#admin{
+	width:940px;
+	position: relative;
+	margin: 0 auto;
+	overflow: hidden;
+/*	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif; */
+	font-family: Tahoma, sans-serif;
+	font-size: 16px;
+}
+
+/* headers */
+#admin h1,h2,h3,h4,h5,h6, legend{
+	color:#222;
+}
+
+/* input fields */
+#admin label{
+	color: #039
+}
+#admin select, #admin input, #admin textarea {
+	font-family: Tahoma, sans-serif;
+	font-size: 16px;
+	color: #669
+}
+#admin textarea {
+	width: 604px;
+	height: 240px;
+}
+#admin textarea, #admin input {
+	border: 3px solid #cccccc;
+	padding: 5px;
+}
+
+/* buttons */
+#admin .button {
+	-moz-border-radius: 6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:1px solid #D6D6D6;
+	padding: 8px;
+	background: #039;
+	color: #fff;
+}
+#admin .button:hover {
+	background: #eee;
+	color: #222;
+}
+
+/* -------------------------------------------------------------------------------- 
+	Sidebar area                                                 
+   -------------------------------------------------------------------------------- */
+
+#admin-sidebar{
+	width:200px;
+	overflow: hidden;
+	margin: 0px 40px 0px 0px;
+	position:relative;
+	float:left;
+}
+
+#admin-sidebar .box{
+	margin:0;
+	padding:0 0 10px 0;
+}
+
+#admin-sidebar .box a{
+	display:block;
+	line-height:22px;
+	padding:3px 10px;
+}
+
+/* -------------------------------------------------------------------------------- 
+	Content area                                                 
+   -------------------------------------------------------------------------------- */
+
+#admin-content {
+	width: 660px;
+	margin: 0;
+	overflow: hidden;
+	position: relative;
+	float: left;
+}
+
+/* Box properties */
+#admin-content .box {
+	width: 620px ;
+	margin: 0px 0px 20px 0px;
+	padding: 20px;
+	background: #e8edff;
+	border-collapse: collapse;
+	-moz-border-radius: 10px;
+	-webkit-border-radius:10px;
+	border-radius:10px;
+}
+
+
+/* -------------------------------------------------------------------------------- 
+	Table properties                                                 
+   -------------------------------------------------------------------------------- */
+
+#admin table {
+	margin: 0px 0px 20px 0px;
+	width: 100%;
+	text-align: left;
+	border-collapse: collapse;
+}
+
+/* Table rounded corners */                                               
+#admin table thead th.corner-top-left { background: #b9c9fe url('/images/admin/left.png') left -1px no-repeat; }
+#admin table thead th.corner-top-right { background: #b9c9fe url('/images/admin/right.png') right -1px no-repeat; }
+#admin table tfoot td.corner-bottom-left { background: #e8edff url('/images/admin/botleft.png') left bottom no-repeat; }
+#admin table tfoot td.corner-bottom-right { background: #e8edff url('/images/admin/botright.png') right bottom no-repeat; }
+
+/* Table header */
+#admin table th {
+	padding: 8px;
+	color: #039;
+	background: #b9c9fe;
+	font-weight: normal;
+}
+
+/* Table body */                                                
+#admin table td {
+	padding: 8px;
+	border-top: 1px solid #fff;
+	color: #669;
+}
+
+/* Table rows (odd, even and hover) */
+#admin table tr.row-odd { background: #eff2ff; }
+#admin table tr.row-even { background: #e8edff; }
+#admin table tbody tr:hover td { background: #d0dafd; }

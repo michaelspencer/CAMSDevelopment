@@ -1,0 +1,20 @@
+<% form_for @post do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </p>
+  <p>
+    <%= f.label :sitelocation, "Site Location" %><br />
+	<%= f.select :sitelocation, Post::POST_SITELOCATION, :prompt => "Where should this post appear?" %>
+  </p>
+  <p>
+    <%= f.label :content %><br />
+    <%= f.text_area :content %>
+  </p>
+  <p><%= f.submit "Save", :class => "button" %> <%= link_to "Cancel", posts_path, :class => "button" %></p>
+<% end %>
