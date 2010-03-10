@@ -1,0 +1,38 @@
+<div id="main">
+
+	<div id='sidebar'>
+
+		<div class="box box_small">
+		
+			<div id="sidebar_image">
+				<img src="/files/sidebar1.jpg" alt="" class='current_img' />
+				<img src="/files/sidebar2.jpg" alt="" />
+				<img src="/files/sidebar3.jpg" alt="" />
+				<img src="/files/sidebar4.jpg" alt="" />
+				<img src="/files/sidebar5.jpg" alt="" />
+			</div><!--end sidebar_image-->
+			
+		</div><!--end box-->
+		
+	</div><!-- end #sidebar -->
+	
+	<div id="content">
+
+		<h2>Login</h2>
+
+		<% form_for @user_session do |f| %>
+		  <%= f.error_messages %>
+		  <p>
+		    <%= f.label :email %><br />
+		    <%= f.text_field :email %>
+		  </p>
+		  <p>
+		    <%= f.label :password %><br />
+		    <%= f.password_field :password %>
+		  </p>
+		  <p><%= f.submit "Login" %></p>
+		<% end %>
+
+	</div><!-- end content -->
+	
+</div><!--end main-->

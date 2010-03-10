@@ -2,21 +2,24 @@ class Post < ActiveRecord::Base
 
   POST_SITELOCATION = [
     # displayed in view................stored in db
-    ["Page: Home",                     "page:home"],
-    ["Page: About",                    "page:about"],
-    ["Page: About/History",            "page:history"],
-    ["Page: About/Leadership",         "page:leadership"],
-    ["Page: About/Partners",           "page:partners"],
-    ["Page: About/Media",              "page:media"],
-    ["Page: Portfolio",                "page:portfolio"],
-    ["Page: Portfolio/Commercial",     "page:commercial"],
-    ["Page: Portfolio/Institutional",  "page:institutional"],
-    ["Page: Portfolio/Residential",    "page:residential"],
-    ["Page: Portfolio/Hotel-Resort",   "page:hotelresort"],
-    ["Page: Portfolio/Urban Renewal",  "page:urbanrenewal"],
-    ["Page: Portfolio/Civil",          "page:civil"],
-    ["Page: Financing",                "page:financing"],
-    ["Page: Contact",                  "page:contact"]
+    ["About",                    "about"],
+    ["About/History",            "history"],
+    ["About/Leadership",         "leadership"],
+    ["About/Partners",           "partners"],
+    ["About/Media",              "media"],
+    ["Portfolio",                "portfolio"],
+    ["Portfolio/Commercial",     "commercial"],
+    ["Portfolio/Institutional",  "institutional"],
+    ["Portfolio/Residential",    "residential"],
+    ["Portfolio/Hotel-Resort",   "hotelresort"],
+    ["Portfolio/Urban Renewal",  "urbanrenewal"],
+    ["Portfolio/Civil",          "civil"],
+    ["Financing",                "financing"],
+    ["Contact",                  "contact"],
+    ["Home: Left Box",           "home:leftbox"],
+    ["Home: Middle Box",         "home:middlebox"],
+    ["Home: Right Box",          "home:rightbox"],
+    ["Home: Headline",           "home:headline"]
   ]
 
   attr_accessible :name, :title, :sitelocation, :content
